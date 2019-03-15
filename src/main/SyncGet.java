@@ -8,7 +8,7 @@ import java.io.IOException;
 
 public class SyncGet {
     public static void main(String[] args) throws IOException {
-        OkHttpClient client = new OkHttpClient.Builder().build();
+        OkHttpClient client = new OkHttpClient.Builder().dns(new OkHttpDns()).build();
 
         Request request = new Request.Builder()
                 .url("http://www.baidu.com")
